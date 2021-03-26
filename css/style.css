@@ -1,0 +1,196 @@
+/*gerais*/
+::placeholder{
+    font-size: medium;
+    color: rgb(177, 177, 177);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, .container, .navbar{
+    width: 100%;
+}
+
+html, body, .container{
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+/*barra*/
+nav{
+    min-width:650px;
+}
+
+.navbar, .navbar-nav, main, .botoes{
+    display: flex;
+}
+
+.navbar{
+    background: black;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav{
+    align-items: center;
+}
+
+.navbar-nav li{
+    margin-left: 2rem;
+}
+
+.navbar-nav input{
+    box-sizing: border-box;
+    height: 2.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+}
+
+.navbar-nav li:last-child{
+    margin-right: 0;
+}
+
+/*container da barra lateral e div dos inputs*/
+main{
+    height: calc(100% - 3.17rem);
+}
+
+/*Barra lateral*/
+aside{
+    background-color: rgb(218, 218, 218);
+    padding: 1.3rem 0;
+    width: 250px;
+}
+
+aside li a{
+    color: rgb(63, 124, 204);
+    display: block;
+    line-height: 45px;
+    padding-left: 1.5rem;
+}
+aside li a:hover{
+    background-color: rgb(42, 42, 173);
+    color: white;
+}
+
+/*section dos forms*/
+.forms input, .forms select{
+    width: 100%;
+}
+
+.forms{
+    padding-top: 1.3rem;
+}
+
+section.formulario{
+    padding: 1.3rem 3rem;
+    width: calc(100% - 250px);
+}
+
+section.formulario h2{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    letter-spacing: 0.04rem;
+}
+
+/*form*/
+
+.div-1, .div-2, .div-3{
+    display:flex;
+}
+.div-1, .div-2 div{
+    margin-bottom: 1rem;
+}
+.input-2, .input-3, .input-5, .input-6{
+    margin-right: 1.8rem;
+}
+.input-4{
+    margin-bottom: 0.5rem;
+}
+.input{
+    flex: 1;
+}
+.input-3, .input-5{
+    flex-grow: 2;
+}
+.input-4, .input-7{
+    flex-grow: 0.5;
+}
+
+/*formatação dos textos do form*/
+.input p{
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+/*formatação do input do form*/
+.input input,
+.input select{
+    padding-left: 0.5rem;
+    height: 2rem;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 3px;
+}
+
+/*botoes*/
+.botoes{
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+.botoes button{
+    padding: 0.5rem 0.6rem;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 3px;
+}
+.botao-1{
+    margin-right: 0.2rem;
+    background-color: rgba(0, 255, 34, 0.924);
+    color: white;
+}
+.botao-2{
+    background-color: white;
+    color: black;
+}
+/*Media queries*/
+@media screen and (max-width: 765px){
+    aside{
+        display: none;
+    }
+    section.formulario{
+        padding: 1.3rem 3rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .div-1, .div-2, .div-3{
+        display: block;
+    }
+    .div-2 div:nth-of-type(1), .div-2 div:nth-of-type(2), .input-5, .input-6{
+        margin-right: 0;
+    }
+    .div-1, .div-2 div, .div-3 div{
+        margin-bottom: 0.5rem;
+    }
+    .botoes{
+        justify-content: center;
+    }
+    main{
+        height: 100%;
+    }
+}
